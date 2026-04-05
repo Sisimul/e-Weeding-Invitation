@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jemputan Mimi & Ismul</title>
     
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -42,7 +44,6 @@
             box-shadow: 0 0 50px rgba(0,0,0,0.05);
         }
 
-        /* Navigasi Hijau Daun Forest (Sama seperti gambar contoh anda) */
         .fixed-footer-nav {
             position: fixed;
             bottom: 0;
@@ -112,7 +113,7 @@
         </a>
     </nav>
 
-    <div class="mobile-container min-h-screen overflow-x-hidden border-x border-gray-100">
+    <div class="mobile-container min-h-screen overflow-x-hidden border-x border-gray-100 shadow-xl">
         
         <section class="hero-bg flex flex-col justify-center items-center text-center px-6">
             <div data-aos="fade-up" data-aos-duration="1500" class="z-10 bg-white/30 p-8 rounded-full backdrop-blur-sm border border-white/50">
@@ -129,7 +130,7 @@
         <section id="countdown" class="py-16 text-center px-4 bg-white/40">
             <div data-aos="fade-up">
                 <h2 class="text-emerald-800 uppercase tracking-widest text-[9px] mb-8 font-bold">Menghitung Hari Bahagia</h2>
-                <div id="timer" class="flex justify-center gap-3">
+                <div id="timer" class="flex justify-center gap-3 mb-10">
                     <div class="timer-box p-4 rounded-2xl w-20">
                         <span id="days" class="text-2xl font-bold block">00</span>
                         <span class="text-[8px] uppercase tracking-tighter opacity-50">Hari</span>
@@ -147,6 +148,12 @@
                         <span class="text-[8px] uppercase tracking-tighter opacity-50">Saat</span>
                     </div>
                 </div>
+
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatulurus+Mimi+%26+Ismul&dates=20270311T020000Z/20270311T090000Z&details=Selamat+datang+ke+majlis+kami!+Lokasi:+https://e-weedinginvitationn.netlify.app/&location=Institut+Latihan+Lembaga+Kenaf+Dan+Tembakau+Negara,+Pasir+Puteh,+Kelantan" 
+                   target="_blank" 
+                   class="inline-flex items-center px-6 py-3 bg-emerald-800 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg active:scale-95 transition">
+                    <i class="fas fa-calendar-plus mr-2"></i> Simpan Tarikh Majlis
+                </a>
             </div>
         </section>
 
@@ -159,7 +166,10 @@
                         Dewan Institut Latihan Lembaga Kenaf Dan Tembakau Negara, <br>
                         <span class="font-bold">Pasir Puteh, Kelantan.</span>
                     </p>
-                    <a href="google.com/maps/dir//Institut+Latihan+Lembaga+Kenaf+Dan+Tembakau+Negara,+16800+Pasir+Puteh,+Kelantan/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31b693953c6dbc1d:0xf55bd15d13ab4fc1?sa=X&ved=1t:57443&ictx=111" target="_blank" class="mt-6 inline-block bg-emerald-800 text-white px-10 py-3 rounded-full text-[10px] font-bold shadow-lg uppercase tracking-widest active:scale-95 transition">Petunjuk Arah</a>
+                    
+                    <a href="https://maps.app.goo.gl/wJkNo98P8oJ3S5C38" target="_blank" class="mt-6 inline-block bg-emerald-800 text-white px-10 py-3 rounded-full text-[10px] font-bold shadow-lg uppercase tracking-widest active:scale-95 transition">
+                        <i class="fas fa-location-arrow mr-2"></i> Buka Google Maps
+                    </a>
                 </div>
 
                 <div class="text-center p-8 bg-emerald-900 text-white rounded-[2rem] shadow-xl">
@@ -235,7 +245,7 @@
             }
         }, 1000);
 
-        // Music Logic (Starts on first interaction with nav)
+        // Music Logic
         const music = document.getElementById("weddingMusic");
         document.querySelector('.fixed-footer-nav').addEventListener('click', function() {
             if (music.paused) music.play();
